@@ -1,0 +1,15 @@
+1. Build docker image
+
+$ docker build -t <user-name>/myfirstapp .
+
+2. Step 2 Check that your image exists:
+
+$ docker images
+REPOSITORY     TAG    IMAGE ID     CREATED       SIZE
+.../myfirstapp latest f1277efd5a79 6 minutes ago 56.34 MB
+
+Step 3 Run a container in a background and expose a standard HTTP port (80), which is redirected to the container’s port 5000:
+
+$ docker run -dp 80:5000 --name myfirstapp <user-name>/myfirstapp
+
+
